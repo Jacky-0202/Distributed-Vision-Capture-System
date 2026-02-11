@@ -20,6 +20,3 @@ mindmap-plugin: mindmap
 	- [[數據傳輸三劍客 (push, pull, fetch)]]
 - Sub title
 - Sub title
-- Sub title
-	- Sub title
-	- Sub title

@@ -1,6 +1,9 @@
 ---
 tags:
+- SOP
+- Git
 ---
+
 ### 摘要
 
 這三個指令負責在本地儲存庫 (Local Repo) 與遠端儲存庫 (Remote Repo) 之間搬運「快照紀錄」。

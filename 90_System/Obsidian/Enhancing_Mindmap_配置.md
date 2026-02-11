@@ -1,6 +1,10 @@
 ---
 tags:
+- Mindmap
+- ObsidianPlugin
+- Configuration
 ---
+
 ## 摘要
 
 本指南旨在發揮 Enhancing Mindmap 「圖文一體」的特性，

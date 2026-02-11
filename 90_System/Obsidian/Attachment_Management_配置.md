@@ -1,6 +1,10 @@
 ---
 tags:
+- Attachment-Management
+- File-Naming
+- Obsidian-Settings
 ---
+
 ## 摘要
 
 本設定旨在達成附件「自動歸位、邏輯命名、嚴格兩層扁平化」，確保系統在搜尋的高效性。

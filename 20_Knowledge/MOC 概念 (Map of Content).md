@@ -1,6 +1,10 @@
 ---
 tags:
+- Note-Taking
+- MOC
+- Knowledge-Management
 ---
+
 ## 摘要
 
 MOC (Map of Content) 是一種非階層式的組織方法，

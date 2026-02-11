@@ -1,6 +1,9 @@
 ---
 tags:
+- KnowledgeManagement
+- AtomicNotes
 ---
+
 ## 摘要
 
 原子筆記（Atomic Notes）是構建「數位大腦」的基礎單元。
