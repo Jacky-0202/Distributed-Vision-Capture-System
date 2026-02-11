@@ -34,7 +34,6 @@ git remote add origin https://github.com/Jacky-0202/Sheng_Obsidian_Vault.git
 git push -u origin main
 ```
 
-
 參考：[[遠端倉庫管理 (remote)]]
 參考：[[分支基礎 (branch, switch&checkout)]]
 參考：[[數據傳輸三劍客 (push, pull, fetch)]]

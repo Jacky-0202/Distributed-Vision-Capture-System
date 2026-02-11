@@ -20,11 +20,17 @@ tags:
 ### 正式提交 (git commit)
 
 - **核心功能**：將暫存區的快照永久存入儲存庫。
-- **常用參數**：
-    
-    - `git commit -m "message"`：最常用的提交方式。
-    - `git commit -v`：在編輯器中顯示變更細節，幫助寫出更精確的訊息。
-        
+
+最常用的提交方式：
+```bash
+git commit -m "message"
+```
+
+ 在編輯器中顯示變更細節
+```bash
+git commit -v
+```
+
 - **提交訊息 (Commit Message) 藝術**：
     
     - **原則**：好的訊息應描述「為什麼改」，而非「改了什麼」。

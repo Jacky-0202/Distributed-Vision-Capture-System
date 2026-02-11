@@ -1,6 +1,5 @@
 ---
 mindmap-plugin: mindmap
-aliases:
 ---
 
 # Git & GitHub
@@ -19,3 +18,8 @@ aliases:
 	- GitHub_建立遠端倉庫流程
 	- [[遠端倉庫管理 (remote)]]
 	- [[數據傳輸三劍客 (push, pull, fetch)]]
+- Sub title
+- Sub title
+- Sub title
+	- Sub title
+	- Sub title
