@@ -1,12 +1,9 @@
 ---
 mindmap-plugin: mindmap
+aliases:
 ---
 
 # Git & GitHub
-- 底層邏輯 (Foundations)
-	- [[Git 版本控制哲學]]
-	- [[Git 三階段模型]]
-	- [[Git 檔案狀態]]
 - 本地庫操作 (Local)
 	- [[環境配置與初始化 (init, config)]]
 	- [[忽略規則設定 (.gitignore)]]
