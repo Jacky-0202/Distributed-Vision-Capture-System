@@ -24,7 +24,7 @@ git push -u origin main
 ```
 通用
 ```bash
-git push origin main
+git push
 ```
         
 - **git fetch (抓)**：
