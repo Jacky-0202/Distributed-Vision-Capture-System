@@ -32,17 +32,28 @@ tags:
 ---
 ## STEP5. 推送到雲端
 
+<<<<<<< HEAD
 - 第一次
+=======
+第一次
+>>>>>>> a5feefa4f6b043ee40d549ce5322dd8df37ac8ea
 ```bash
 git branch -M main
 git remote add origin https://github.com/Jacky-0202/Sheng_Obsidian_Vault.git
 git push -u origin main
 ```
 
+<<<<<<< HEAD
 - 之後的流程
 ```bash
 git add .
 git commit -m "message"
+=======
+通用
+```
+git add .
+git commit -m "update"
+>>>>>>> a5feefa4f6b043ee40d549ce5322dd8df37ac8ea
 git push
 ```
 
