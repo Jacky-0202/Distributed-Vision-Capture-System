@@ -35,4 +35,4 @@ tags:
 
 #### 圖示
 
-![[激勵函數 Activation Function_20260213162349.png]]
+![[激勵函數 Activation Function_20260220160157.png]]
