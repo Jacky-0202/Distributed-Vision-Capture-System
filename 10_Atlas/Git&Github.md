@@ -12,7 +12,7 @@ mindmap-plugin: markdown
 - 本地操作
     - [[環境配置與初始化 (init, config)]]
     - [[忽略規則設定 (.gitignore)]]
-    - [[變更紀錄的藝術 (add, commit)]]
+    - [[變更紀錄 (add, commit)]]
 - 分支管理
     - [[分支基礎 (branch, switch&checkout)]]
     - [[合併與衝突處理 (merge, conflict)]]

@@ -22,7 +22,7 @@ tags:
 ---
 ## STEP3. 紀錄到儲存庫
 
-參考：[[變更紀錄的藝術 (add, commit)]]
+參考：[[變更紀錄 (add, commit)]]
 
 ---
 ## STEP4. 建立 GitHub 遠端倉庫
