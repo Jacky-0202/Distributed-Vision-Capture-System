@@ -1,8 +1,5 @@
 ---
-tags:
-- Attachment-Management
-- File-Naming
-- Obsidian-Settings
+tags: [Obsidian, Attachment, Configuration]
 ---
 
 ## 摘要

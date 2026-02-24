@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, Math, Backpropagation]
 ---
 ## 摘要
 

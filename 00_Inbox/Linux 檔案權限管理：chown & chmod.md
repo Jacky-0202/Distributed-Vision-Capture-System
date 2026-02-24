@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Linux, Chmod, Permissions]
 ---
 ## 👤 1. chown (Change Owner) —— 「這是誰的？」
 

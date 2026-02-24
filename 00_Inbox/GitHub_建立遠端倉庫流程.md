@@ -1,8 +1,5 @@
 ---
-tags:
-- SOP
-- Obsidian
-- Git
+tags: [Git, RepositorySetup, WebUi]
 ---
 
 ## 摘要

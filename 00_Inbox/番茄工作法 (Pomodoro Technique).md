@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Plan, Pomodoro, Execution]
 ---
 ## 摘要
 

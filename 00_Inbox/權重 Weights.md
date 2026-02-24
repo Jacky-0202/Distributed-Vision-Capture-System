@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Math, Statistics, WeightedAverage]
 ---
 ## 摘要
 

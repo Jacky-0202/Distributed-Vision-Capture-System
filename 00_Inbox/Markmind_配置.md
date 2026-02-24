@@ -1,8 +1,5 @@
 ---
-tags:
-- Mindmap
-- ObsidianPlugin
-- Configuration
+tags: [Obsidian, Config, Markmind]
 ---
 
 ## 摘要

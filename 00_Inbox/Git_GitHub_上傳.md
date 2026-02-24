@@ -1,8 +1,5 @@
 ---
-tags:
-- Obsidian
-- Git
-- Version-Control
+tags: [Git, Upload, Repository]
 ---
 
 ## STEP1. 建立過濾器 (`.gitignore`)

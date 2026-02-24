@@ -1,7 +1,5 @@
 ---
-tags:
-- SOP
-- Git
+tags: [Git, Command, PushPullFetch]
 ---
 
 ### 摘要

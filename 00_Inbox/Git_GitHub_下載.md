@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Git, Clone, Sync]
 ---
 ## 遠端下載與複製 (Clone)
 

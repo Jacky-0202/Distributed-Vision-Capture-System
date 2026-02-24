@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, Optimization, LearningRate]
 ---
 ## 摘要
 

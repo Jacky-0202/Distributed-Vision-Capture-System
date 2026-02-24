@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, Math, MatrixOperation]
 ---
 ## 摘要
 

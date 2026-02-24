@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Systemd, StartupScript]
 ---
 ## 1. 核心元件：systemd 服務檔案
 

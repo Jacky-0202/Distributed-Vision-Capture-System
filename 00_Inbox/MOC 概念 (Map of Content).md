@@ -1,8 +1,5 @@
 ---
-tags:
-- Note-Taking
-- MOC
-- Knowledge-Management
+tags: [Obsidian, MOC, ConceptMapping]
 ---
 
 ## 摘要

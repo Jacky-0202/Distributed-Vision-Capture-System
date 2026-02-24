@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, LossFunction, MSECrossEntropy]
 ---
 ## 摘要
 

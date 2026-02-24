@@ -1,8 +1,5 @@
 ---
-tags:
-- requirements-management
-- pip
-- Python
+tags: [Python, Pip, Install]
 ---
 
 ## **安裝 pip**

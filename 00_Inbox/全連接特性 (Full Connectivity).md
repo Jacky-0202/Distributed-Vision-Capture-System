@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, NeuralNetwork, FullConnectivity]
 ---
 ## 摘要
 

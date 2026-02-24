@@ -1,7 +1,5 @@
 ---
-tags:
-- Git
-- Version-Control
+tags: [Git, AddCommit, StagingArea]
 ---
 
 ### 摘要

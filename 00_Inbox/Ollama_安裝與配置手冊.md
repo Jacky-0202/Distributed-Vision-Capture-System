@@ -1,8 +1,5 @@
 ---
-tags:
-- Python
-- Automation
-- GPU
+tags: [AI, System, Installation]
 ---
 
 ## 摘要

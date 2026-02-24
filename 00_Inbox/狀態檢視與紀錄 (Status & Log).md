@@ -1,7 +1,5 @@
 ---
-tags:
-- Git
-- Version-Control
+tags: [Git, StatusLog, CommitHistory]
 ---
 
 ## 摘要

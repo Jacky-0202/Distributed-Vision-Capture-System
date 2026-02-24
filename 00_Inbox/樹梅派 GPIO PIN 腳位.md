@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, GPIO, Pinout]
 ---
 ## 圖示
 

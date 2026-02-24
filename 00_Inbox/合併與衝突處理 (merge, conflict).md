@@ -1,7 +1,5 @@
 ---
-tags:
-- Merge
-- Git
+tags: [Git, Merge, ConflictResolution]
 ---
 
 ## 摘要

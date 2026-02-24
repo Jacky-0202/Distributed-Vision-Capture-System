@@ -1,8 +1,5 @@
 ---
-tags:
-- SOP
-- Obsidian
-- Plugins
+tags: [Obsidian, Setup, Plugins]
 ---
 
 ## 摘要

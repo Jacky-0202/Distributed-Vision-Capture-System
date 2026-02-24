@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, Math, Intercept]
 ---
 ## 摘要
 

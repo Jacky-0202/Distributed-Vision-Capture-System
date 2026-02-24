@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, Temperament]
 ---
 ## 十二平均律的音程結構 (Structure of 12-Tone Equal Temperament)
 

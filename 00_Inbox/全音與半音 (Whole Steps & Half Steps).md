@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, Scales]
 ---
 ## 半音 (Half Steps) —— 音樂中的「最小步伐」
 
@@ -29,4 +29,4 @@ tags:
 ---
 ## 圖示
 
-![[全音與半音 (Whole Steps & Half Steps)_20260223120100.png]]
+![[全音與半音 (Whole Steps & Half Steps)_20260224222009.png]]

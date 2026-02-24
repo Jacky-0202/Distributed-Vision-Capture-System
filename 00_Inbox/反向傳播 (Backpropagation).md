@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, NN, Backpropagation]
 ---
 ## 摘要
 

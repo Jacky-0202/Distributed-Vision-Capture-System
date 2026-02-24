@@ -1,8 +1,5 @@
 ---
-tags:
-- Virtual-Environment
-- Project-Setup
-- Python
+tags: [Linux, VirtualEnv, Setup]
 ---
 
 ## 進入專案目錄

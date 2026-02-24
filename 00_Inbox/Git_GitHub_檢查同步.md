@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Git, FetchStatus, SyncCheck]
 ---
 ### 1. 最快的方法：`git status`
 

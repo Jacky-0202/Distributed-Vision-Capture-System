@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, PitchNames]
 ---
 ## 音名 (Pitch Names)
 

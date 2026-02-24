@@ -1,8 +1,5 @@
 ---
-tags:
-- GitHub
-- SSH
-- Security
+tags: [Linux, SSH, KeyConfig]
 ---
 
 ## 摘要

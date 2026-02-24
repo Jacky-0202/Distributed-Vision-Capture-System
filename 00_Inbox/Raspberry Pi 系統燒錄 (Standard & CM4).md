@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Burn, Emmc]
 ---
 ## 🛠️ 事前準備
 

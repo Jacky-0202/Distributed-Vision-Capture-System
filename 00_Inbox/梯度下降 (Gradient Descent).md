@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, Optimization, GradientDescent]
 ---
 **核心定義**：一種優化演算法，透過不斷沿著損失函數（Loss）的**負梯度方向**更新參數，目標是尋找能讓損失值最小化的權重組合。
 

@@ -1,7 +1,5 @@
 ---
-tags:
-- Git
-- Version-Control
+tags: [Git, InitConfig, RepositorySetup]
 ---
 
 ## 摘要

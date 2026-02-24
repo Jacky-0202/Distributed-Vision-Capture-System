@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, NN, InputLayer]
 ---
 ## 摘要
 

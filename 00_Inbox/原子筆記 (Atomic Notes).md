@@ -1,7 +1,5 @@
 ---
-tags:
-- KnowledgeManagement
-- AtomicNotes
+tags: [Plan, Methodology, AtomicNotes]
 ---
 
 ## 摘要
@@ -27,4 +25,4 @@ tags:
 ## 🚀 實踐規範
 
 
-![[原子筆記 (Atomic Notes)_20260211140346.png]]
+![[原子筆記 (Atomic Notes)_20260224221917.png]]

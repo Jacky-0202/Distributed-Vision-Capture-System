@@ -1,7 +1,5 @@
 ---
-tags:
-- Git
-- Version-Control
+tags: [Git, Concept, Snapshot]
 ---
 
 ## 摘要

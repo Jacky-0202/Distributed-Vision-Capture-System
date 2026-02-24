@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, NN, ReLU]
 ---
 ## 摘要
 

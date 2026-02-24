@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, ForwardPropagation, Inference]
 ---
 ## 摘要
 

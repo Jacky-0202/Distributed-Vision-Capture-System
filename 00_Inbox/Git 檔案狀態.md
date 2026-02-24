@@ -1,7 +1,5 @@
 ---
-tags:
-- Git
-- Version-Control
+tags: [Git, Status, Workflow]
 ---
 
 ## 摘要

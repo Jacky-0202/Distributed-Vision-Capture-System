@@ -1,7 +1,5 @@
 ---
-tags:
-- Git
-- Version-Control
+tags: [Git, Remote, Manage]
 ---
 
 ## 摘要

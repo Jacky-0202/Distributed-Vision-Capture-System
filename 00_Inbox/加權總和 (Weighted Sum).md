@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, Math, WeightedSum]
 ---
 ## 摘要
 

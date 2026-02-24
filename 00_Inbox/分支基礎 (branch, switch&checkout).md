@@ -1,7 +1,5 @@
 ---
-tags:
-- Branching
-- Git
+tags: [Git, Branching, SwitchCheckout]
 ---
 
 ## 摘要
