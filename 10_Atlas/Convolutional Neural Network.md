@@ -15,7 +15,7 @@ mindmap-plugin: markdown
     - [[填充與步幅 (Padding & Stride)]]
     - [[感受野 (Receptive Field)]]
 - **資訊精煉與非線性 (The Processing)**
-    - [[激勵函數 Activation Function]]
+    - [[激勵函數 (Activation Function)]]
     - [[池化層 (Pooling)]]
     - [[1x1 卷積：通道降維]]
 - 
