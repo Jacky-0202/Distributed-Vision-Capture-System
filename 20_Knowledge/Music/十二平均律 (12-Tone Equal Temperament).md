@@ -22,4 +22,4 @@ tags: [Music, Theory, Temperament]
     
 - **半音頻率乘數：** 每上升一個半音，頻率需乘以 **$\sqrt[12]{2}$** (約等於 $1.059463$)。
     
-    > $$f_{next} = f_{current} \times \sqrt[12]{2}$$
+    $$f_{next} = f_{current} \times \sqrt[12]{2}$$

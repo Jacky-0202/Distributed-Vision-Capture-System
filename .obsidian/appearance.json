@@ -1,4 +1,9 @@
 {
   "showViewHeader": true,
-  "showRibbon": true
+  "showRibbon": true,
+  "enabledCssSnippets": [
+    "table-full-height",
+    "Beautify-Notes",
+    "Table-full-height"
+  ]
 }
