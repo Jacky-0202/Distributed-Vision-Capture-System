@@ -29,4 +29,4 @@ tags: [Music, Theory, Scales]
 ---
 ## 圖示
 
-![[全音與半音 (Whole Steps & Half Steps)_20260224222009.png]]
+![[全音與半音 (Whole Steps & Half Steps)_20260225094715.png]]

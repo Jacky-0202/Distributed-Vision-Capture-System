@@ -5,7 +5,7 @@ tags: [Plan, EisenhowerMatrix, Prioritize]
 
 利用「重要性」對目標的貢獻度）與「緊急性」（時間的急迫度）這兩個軸線，將所有待辦事項分為四個類別，以決定處理的順序
 
-![[時間四象限法 (Eisenhower Matrix)_20260220160153.png]]
+![[時間四象限法 (Eisenhower Matrix)_20260225094557.png]]
 
 ---
 ## 四個象限的定義與策略 (The Four Quadrants)

@@ -8,7 +8,7 @@ tags: [Plan, Pomodoro, Execution]
 ---
 ##  執行步驟 (Execution Steps)
 
-![[番茄工作法 (Pomodoro Technique)_20260220160159.png]]
+![[番茄工作法 (Pomodoro Technique)_20260225094527.png]]
 
 1. **決定任務**：先決定好需要完成的單一任務 。
 2. **設定倒數**：設定計時器為 **25 分鐘** 。

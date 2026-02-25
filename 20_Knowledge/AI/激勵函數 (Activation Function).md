@@ -35,4 +35,4 @@ tags: [AI, NN, ReLU]
 
 #### 圖示
 
-![[激勵函數 (Activation Function)_20260224134915.png]]
+![[激勵函數 (Activation Function)_20260225094536.png]]
