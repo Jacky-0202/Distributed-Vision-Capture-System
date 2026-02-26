@@ -40,14 +40,17 @@ rpi-imager
 3. **選擇 OS**：推薦 _Raspberry Pi OS (64-bit)_。
 4. **選擇儲存卡**：選取你的 MicroSD 卡。
 5. **進階設定 (必做)**：
-    
-    - 按下 `Ctrl + Shift + X` 開啟隱藏選單。
-    - **Hostname**: 設定名稱（如 `pi-server`）。
-    - **SSH**: 勾選並設定密碼或公鑰。
-    - **Wi-Fi**: 預填 SSID 與密碼，省去接螢幕的麻煩。
-        
-6. **寫入 (Write)**：完成後插回 Pi 即可。
-    
+
+    * **Hostname**：`pi` (Imager 會自動加上 `.local`)。
+    * **Enable SSH**：✅ (勾選)，並選擇 "Use password authentication"。
+    * **Set username and password**：
+        * Username: `???`
+        * Password: `???`
+    * **Configure wireless LAN**：✅ (勾選)
+        * SSID: `???`
+        * Password: `???`
+    * **Country**：`TW`
+    * **Time zone** ： `Asia/Taipei`
 
 ---
 
@@ -85,7 +88,11 @@ sudo rpiboot
 
 ### 第三階段：燒錄與恢復
 
-1. **燒錄**：開啟 `rpi-imager`，儲存裝置選擇剛出現的 eMMC 磁區。
+1. **燒錄**：儲存裝置選擇剛出現的 eMMC 磁區。
+```bash
+rpi-imager
+```
+
 2. **斷電**：燒錄完成後，**關閉電源**。
 3. **切換模式**：**務必移除 J2 的跳線**，否則會一直卡在燒錄模式。
 4. **重啟**：重新上電，系統即從 eMMC 啟動。
