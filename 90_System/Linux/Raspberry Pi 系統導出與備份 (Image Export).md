@@ -6,7 +6,7 @@ tags: [Pi, Backup, Export]
 導出的過程其實就是**燒錄的逆向工程**：將 SD 卡或 eMMC 的內容「讀取」出來，並儲存為電腦中的檔案。
 
 ---
-## 📂 場景一：標準版 Pi / CM4 Lite (SD 卡)
+## 📂 場景一：標準版 Pi  (SD 卡)
 
 ### 🖥️ Windows 環境
 
@@ -54,6 +54,9 @@ CM4 eMMC 無法直接讀取，必須先進入「虛擬磁碟模式」。
     1. 使用 `lsblk` 找到 eMMC 對應的代號（例如 `/dev/sdc`）。
     2. 使用 `dd` 指令導出。
 
+```bash
+sudo dd if=/dev/sdb of=~/pi_backup.img bs=4M status=progress
+```
 
 ---
 ## ✂️ 必學技巧：映像檔瘦身 (PiShrink)
