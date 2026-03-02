@@ -21,13 +21,13 @@ sudo chown tec pi_backup.img
     
 - **更改擁有者與群組**：同時將擁有者與群組都改為 `tec`。
 
-```
+```bash
 sudo chown tec:tec pi_backup.img
 ```
 
 - **遞迴更改 (資料夾)**：將整個目錄及其下的所有檔案都改給 `tec`。
 
-```
+```bash
 sudo chown -R tec:tec  /home/pi/my_project
 ```
 

@@ -41,9 +41,12 @@ CM4 eMMC 無法直接讀取，必須先進入「虛擬磁碟模式」。
 1. **硬體設置**：將 CM4 載板上的 **J2 (nRPIBOOT)** 短路。
 2. **連線**：用 USB 線連接電腦 Slave 孔與供電。
 3. **執行 rpiboot**：
-    
-    - **Linux**: `sudo rpiboot`
-    - **Windows**: 執行 `rpiboot.exe` 等待工具跑完，電腦會出現一個「新的磁碟」。
+- **Linux**: 
+```bash
+sudo rpiboot
+```
+
+- **Windows**: 執行 `rpiboot.exe` 等待工具跑完，電腦會出現一個「新的磁碟」。
 
 ### 第二階段：讀取系統映像
 

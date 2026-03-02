@@ -15,7 +15,7 @@ mindmap-plugin: markdown
     - [[附點與裝飾音 (Dots & Ornaments)]]
     - [[切分音與反拍 (Syncopation)]]
 - 音階系統 (Scale System)
-    - [[大調音階公式 (Major Scale)]]
+    - [[大調音階 (Major Scale)]]
     - [[小調音階公式 (Minor Scale)]]
     - [[音程與度數 (Intervals)]]
     - [[關係大小調 (Relative Keys)]]
