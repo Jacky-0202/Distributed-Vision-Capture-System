@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, NotesAndRests]
 ---
 ## 音符家族 (Note Values)
 
@@ -11,7 +11,7 @@ tags:
 - **八分音符 (Eighth Note)：** 實心圓圈、一條槓、再加一條「小尾巴」（旗部）。長度是四分音符的一半，只有 0.5 拍。
 - **十六分音符 (Sixteenth Note)：** 有「兩條小尾巴」。長度更短，只有 0.25 拍。
 
-![[音符時值與休止符 (Note Values & Rests)_20260225152741.png|800]]
+![[音符時值與休止符 (Note Values & Rests)_20260302212506.png|800]]
 
 ---
 ## 休止符家族 (Rests)
@@ -26,5 +26,5 @@ tags:
 - **八分休止符 (Eighth Rest)：** 像一個帶有一顆小圓點的**「數字 7」**。安靜 $0.5$ 拍。
 - **十六分休止符 (Sixteenth Rest)：** 像有**「兩個圓點的 7」**。安靜 $0.25$ 拍。
 
-![[音符時值與休止符 (Note Values & Rests)_20260225152816.png|800]]
+![[音符時值與休止符 (Note Values & Rests)_20260302212506-1.png|800]]
 

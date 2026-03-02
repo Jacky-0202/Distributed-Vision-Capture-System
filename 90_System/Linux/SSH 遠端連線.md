@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, SSH, ConnectionSetup]
 ---
 ### ⚠️ 核心前提：連線成功的三大鐵律
 

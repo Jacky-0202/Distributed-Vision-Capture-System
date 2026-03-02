@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Python, VirtualEnv]
 ---
 ## 很簡單所以不囉唆
 

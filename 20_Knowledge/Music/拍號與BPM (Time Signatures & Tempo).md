@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, TempoSignatures]
 ---
 ## BPM
 
@@ -41,4 +41,4 @@ tags:
     - 口訣：**強**、弱、弱。
     - 風格：華爾滋 (Waltz)。
 
-![[拍號與BPM (Time Signatures & Tempo)_20260225151617.jpg]]
+![[拍號與BPM (Time Signatures & Tempo)_20260302212551.jpg]]

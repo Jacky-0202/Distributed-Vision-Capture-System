@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Camera, Config]
 ---
 ### IMX 系列參數設定
 

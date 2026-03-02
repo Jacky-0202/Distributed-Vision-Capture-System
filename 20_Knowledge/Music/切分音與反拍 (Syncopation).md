@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, Syncopation]
 ---
 ### 反拍 (Offbeats) 
 
@@ -24,8 +24,8 @@ tags:
 
 舉例：原本的強度
 
-![[切分音與反拍 (Syncopation)_20260226112325.png]]
+![[切分音與反拍 (Syncopation)_20260302212557.png]]
 
 切分音後的強度
 
-![[切分音與反拍 (Syncopation)_20260226111807.png|400]]
+![[切分音與反拍 (Syncopation)_20260302212557-1.png|400]]

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Vnc, Setup]
 ---
 ## 1. 樹莓派端 (Server) 準備
 
