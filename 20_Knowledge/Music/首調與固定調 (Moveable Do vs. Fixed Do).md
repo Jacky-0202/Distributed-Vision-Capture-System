@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, Scales]
 ---
 ### 🆔 1. 固定調 (Fixed Do) —— 「身分證名字」
 

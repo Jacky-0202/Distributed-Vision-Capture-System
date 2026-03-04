@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Linux, Command, Delete]
 ---
 ## 🧠 基本概念
 

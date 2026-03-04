@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, Intervals]
 ---
 ## 音程的兩大組成：度數與性質
 
@@ -23,7 +23,7 @@ tags:
 - **純 (Perfect)：** 聽起來極度和諧、空靈（1, 4, 5, 8 度）。
 - **大 (Major) / 小 (Minor)：** 聽起來有色彩感（2, 3, 6, 7 度）。
 
-![[音程與度數 (Intervals)_20260303132008.jpg|600]]
+![[音程與度數 (Intervals)_20260304202520.jpg|600]]
 
 ####  變形規律：大 vs. 小 (The Great Expansion)
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Network, mDNS]
 ---
 ## 1. 核心機制：mDNS (Avahi/Bonjour)
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Setup, BootOptions]
 ---
 ### 1. 進入設定選單
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, StreamingResponse, BinaryData]
 ---
 ## 摘要
 

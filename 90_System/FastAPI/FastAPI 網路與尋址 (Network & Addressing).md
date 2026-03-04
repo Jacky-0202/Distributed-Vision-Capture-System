@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Network, Addressing, Configuration]
 ---
 ## 摘要
 

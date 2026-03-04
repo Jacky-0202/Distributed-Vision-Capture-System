@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, Inversions]
 ---
 ## 1. 核心定義：成分不變，順序改變
 

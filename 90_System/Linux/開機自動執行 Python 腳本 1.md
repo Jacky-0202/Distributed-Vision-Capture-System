@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Pi, Systemd, StartupScript]
 ---
 ## 摘要
 

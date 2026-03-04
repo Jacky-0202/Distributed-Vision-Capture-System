@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [Music, Theory, ScalesAndChords]
 ---
 ### 🧱 什麼是三和弦？
 

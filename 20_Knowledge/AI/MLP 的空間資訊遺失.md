@@ -1,5 +1,5 @@
 ---
-tags:
+tags: [AI, MLP, Flattening]
 ---
 ## 摘要
 
