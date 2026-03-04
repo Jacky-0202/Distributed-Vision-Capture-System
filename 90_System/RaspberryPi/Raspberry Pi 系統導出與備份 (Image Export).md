@@ -43,7 +43,7 @@ CM4 eMMC 無法直接讀取，必須先進入「虛擬磁碟模式」。
 3. **執行 rpiboot**：
 - **Linux**: 
 ```bash
-sudo rpiboot
+rpiboot
 ```
 
 - **Windows**: 執行 `rpiboot.exe` 等待工具跑完，電腦會出現一個「新的磁碟」。
