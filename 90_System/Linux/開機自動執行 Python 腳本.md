@@ -1,40 +1,43 @@
 ---
 tags: [Pi, Systemd, StartupScript]
 ---
-## 1. 核心元件：systemd 服務檔案
+## 摘要
 
-`systemd` 是 Linux 的總指揮官。我們建立一個「劇本」(Service file)，告訴它該怎麼做。
+讓任何 Linux 設備（樹莓派、PC、伺服器）開機後自動進入專案目錄，使用虛擬環境執行 Python 腳本，
+並在執行完成後自動關機，同時支援開發者遠端監控日誌。
 
-**劇本位置：** `/etc/systemd/system/pds.service`
-**建立指令：** 
+---
+## 🛠️ 步驟 1：建立 Systemd 服務檔案
+
+`systemd` 是 Linux 的總指揮官。我們需要建立一個 `.service` 檔案來定義自動化動作。
+
+1. **開啟編輯器**： 
 ```bash
 sudo nano /etc/systemd/system/pds.service
 ```
 
-**劇本內容 (pds.service)：**
+2. **貼入以下通用內容**（請根據實際路徑修改 `{{...}}` 處）：
+
 ```ini
 [Unit]
-Description=PDS Upload Script
-# 🔥 關鍵：告訴 systemd 等到網路 100% 連線後才啟動
+Description=PDS Universal Auto-Run Service
 After=network-online.target
 Wants=network-online.target
 
 [Service]
-# 1. 執行這個服務的使用者 (非 root，更安全)
+# 1. 執行的使用者與工作目錄
 User=pi
 Group=pi
+WorkingDirectory=/home/pi/Documents/PDS_RaspberryPI4_IOT
 
+# 2. 關鍵：Python 執行檔
+# ExecStart=/home/pi/your_project_folder/.venv/bin/python3 main.py # 指定虛擬環境中
+ExecStart=/usr/bin/python3 /home/pi/Documents/PDS_RaspberryPI4_IOT/main.py
 
-# 2. 腳本的工作目錄 (它才能找到 upload_files)
-WorkingDirectory=/home/pi
+# 3. 確保 print 訊息能即時顯示在日誌中
+Environment=PYTHONUNBUFFERED=1
 
-# 3. 這裡修改：指定工作目錄為你的專案資料夾
-WorkingDirectory=/home/pi/rpi405x/Common_WSN
-
-# 4. 執行
-ExecStart=/usr/bin/python3 /home/pi/rpi405x/Common_WSN/WISN_V7.py
-
-# 5. 執行完就結束，不要重啟
+# 4. 執行完畢不重啟
 Restart=no
 
 [Install]
@@ -42,58 +45,52 @@ WantedBy=multi-user.target
 ```
 
 ---
+## 🛠️ 步驟 2：授權免密碼關機 (Visudo)
 
-## 2. 核心元件：Sudo 權限 (Visudo)
+為了讓 Python 腳本中的 `sudo shutdown` 能順利執行而不被密碼卡住，必須設定權限。
 
-**問題：** `main.py` 腳本中的 `os.system("sudo shutdown -h now")` 需要 `sudo` 權限，但 `systemd` 是以普通使用者 `hipoint` 的身分執行的。
-
-**解法：** 我們必須明確地「只」授權 `hipoint` 可以「免密碼」執行 `shutdown` 這**一個**指令。
-
-**編輯指令：** (這是唯一安全的方式，不要直接編輯檔案)
-```bash
-sudo visudo
-```
-
-**在檔案最底部加入這行：**
-```ini
-# 格式：[使用者] [在哪台主機]=(可切換成誰) NOPASSWD: [完整的指令路徑]
-pi ALL=(ALL) NOPASSWD: /usr/sbin/shutdown
-```
-
-- **注意：** 必須是 `/usr/sbin/shutdown` 這個**完整路徑**，不能只是 `shutdown`。
+1. **進入權限編輯器**： `sudo visudo`
+2. **在檔案最底部加入這行**： `pi ALL=(ALL) NOPASSWD: /usr/sbin/shutdown`
+    
+    > **注意**：若使用 `systemctl poweroff`，路徑通常為 `/usr/bin/systemctl`。
 
 ---
-## 3. 部署與監控 (驗收流程)
 
-#### 3.1. 部署指令 (三部曲)
+## 🛠️ 步驟 3：部署與啟動
 
+完成設定後，通知系統載入並執行。
+
+1. **重新載入配置**：
 ```bash
-# 1. 通知 systemd 總指揮官：「嘿！我有新劇本 (pds.service) 了！」
 sudo systemctl daemon-reload
+```
 
-# 2. 設定「開機自動啟動」 (Enable)
-# (這會建立一個連結，讓 Pi 未來每次開機都自動執行)
+2. **設定開機自啟**：
+```bash
 sudo systemctl enable pds.service
+```
 
-# 3. 立刻試跑一次 (Start) (可選，用來測試)
+3. **立刻手動試跑**：
+```bash
 sudo systemctl start pds.service
 ```
 
-- 立刻停止
-```bash
-sudo systemctl stop pds.service
-```
+---
+## 🛠️ 步驟 4：監控與偵錯 (Log 檢視)
 
-- 取消開機自動啟動
-```bash
-sudo systemctl disable pds.service
-```
+這是開發者最重要的「控制室」，用來確認 `print` 訊息與報錯。
 
-#### 3.2. 🔥 監控執行狀況 (看 Log)
-
-這是你的「控制室」。這個指令可以**即時查看** `main.py` 裡面所有的 `print` 訊息。
+- **即時監控（直播模式）**： 
 ```bash
 journalctl -u pds.service -f
 ```
-- `-u pds.service`：只看 (unit) `pds.service` 服務的日誌。
-- `-f`：(Follow) 跟隨模式，像看直播一樣即時顯示最新訊息。
+
+- **停止服務**：
+```bash
+sudo systemctl stop pds.service
+```
+    
+- **取消開機自啟**：
+```bash
+sudo systemctl disable pds.service
+```
