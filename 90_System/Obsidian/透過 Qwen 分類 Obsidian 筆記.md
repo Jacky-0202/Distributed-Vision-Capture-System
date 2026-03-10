@@ -3,7 +3,7 @@ tags: [Obsidian, AI, Classification]
 ---
 ## 摘要
 
-
+就是...分就對了
 
 ## 程式碼-範例
 
