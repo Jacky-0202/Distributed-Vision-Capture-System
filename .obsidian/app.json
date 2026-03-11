@@ -2,5 +2,6 @@
   "showInlineTitle": true,
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "00_Inbox"
+  "newFileFolderPath": "00_Inbox",
+  "promptDelete": false
 }
