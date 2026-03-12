@@ -37,7 +37,7 @@ pip install --upgrade pip
 ```
 pip install --upgrade pip
 pip install -r requirements.txt
-pip install funasr modelscope pydub
+pip install funasr modelscope pydub torchaudio
 ```
 
 ### FireRedASR 原始碼修正 (必要)
