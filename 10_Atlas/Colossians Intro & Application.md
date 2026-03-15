@@ -1,4 +1,0 @@
----
-mindmap-plugin: markdown
----
-
