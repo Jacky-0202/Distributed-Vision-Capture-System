@@ -1,7 +1,7 @@
 {
   "language": "en",
   "attachPath": {
-    "attachmentRoot": "99_Resource/Images",
+    "attachmentRoot": "99_Resource",
     "saveAttE": "inFolderBelow",
     "attachmentPath": ".",
     "attachFormat": "${notename}_${date}",
@@ -9,10 +9,17 @@
     "extensionOverride": [
       {
         "extension": "pdf",
-        "attachmentRoot": "99_Resource/PDFs",
+        "attachmentRoot": "99_Resource",
         "saveAttE": "inFolderBelow",
-        "attachmentPath": "..",
-        "attachFormat": "${notename}_${index}"
+        "attachmentPath": "PDFs",
+        "attachFormat": "${notename}_${date}"
+      },
+      {
+        "extension": "png, jpg, jpeg,webp",
+        "attachmentRoot": "99_Resource",
+        "saveAttE": "inFolderBelow",
+        "attachmentPath": "Images",
+        "attachFormat": "${notename}_${date}"
       }
     ]
   },
@@ -20,7 +27,9 @@
   "excludeExtensionPattern": "",
   "autoRenameAttachment": true,
   "excludedPaths": "",
-  "excludePathsArray": [],
+  "excludePathsArray": [
+    ""
+  ],
   "excludeSubpaths": false,
   "originalNameStorage": [],
   "overridePath": {},
