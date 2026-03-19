@@ -4,9 +4,9 @@ mindmap-plugin: markdown
 # Modbus Protocol
 
 - 協議基礎 (Protocol Fundamentals)
-	- [[傳輸模式]]
-	- [[功能碼 (Function Codes)]]
-	- [[定址邏輯]]
+	- [[PLC 傳輸模式]]
+	- [[PLC 功能碼 (Function Codes)]]
+	- [[PLC 定址邏輯]]
 - 資料解析與封裝 (Mapping Logic)
 	- [[資料型態轉換]]
 	- Endianness（位元組順序）

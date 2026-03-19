@@ -1,38 +1,42 @@
 ---
 tags: [Pi, Setup, Headless]
 ---
+# Remote Desktop (RustDesk) & Headless Setup Guide
 
----
-## 安裝 RustDesk
+## 1. RustDesk 安裝 (Linux 通用)
 
-- 官方下載網址 ： [RustDesk GitHub Releases](https://github.com/rustdesk/rustdesk)
+> [!TIP] 官方下載位址 [RustDesk GitHub Releases](https://github.com/rustdesk/rustdesk/releases) (請根據架構選擇 `.deb` 檔，如 `x86_64` 或 `aarch64`)
 
-#### 安裝方式
+### 安裝方式
+
+建議使用 **方式二**，因為它能自動處理依賴問題。
 
 ```bash
-# 方式一（需再補依賴）
-sudo dpkg -i rustdesk-1.4.0-aarch64.deb
-sudo apt --fix-broken install
+# 推薦方式：自動處理依賴
+sudo apt update
+sudo apt install ./rustdesk-1.4.0-<arch>.deb
 
-# 方式二（推薦，會自動處理依賴）
-sudo apt install ./rustdesk-1.4.0-aarch64.deb
+# 備用方式：手動修復依賴
+# sudo dpkg -i rustdesk-1.4.0-<arch>.deb
+# sudo apt --fix-broken install
 ```
 
 ---
-#### 無螢幕 (Headless) 顯示修復
 
-**目的**：讓 CM4 在未接實體螢幕時，仍能強制啟動 GPU 渲染並提供 1080p 畫面。
+## 2. Headless 無螢幕顯示優化 (Raspberry Pi CM4 專用)
 
-#### Step A: 系統層級設定 (raspi-config)
+> [!WARNING] 注意事項 以下設定僅適用於使用 **Ubuntu for Raspberry Pi** 的 CM4 裝置。普通 PC 系統不適用 `config.txt` 調整。
+
+### Step A: 系統層級設定 (raspi-config)
 
 ```bash
 sudo raspi-config
 ```
 
-1. **切換顯示架構**：`6 Advanced Options` -> `A6 Wayland` -> 選擇 **`W1 X11`**。
-2. **開啟 VNC 服務**：`3 Interface Options` -> `I3 VNC` -> **`Yes`**。
+1. **切換顯示架構**：`6 Advanced Options` -> `A6 Wayland` -> 選擇 `W1 X11`。    
+2. **開啟 VNC 服務**：`3 Interface Options` -> `I3 VNC` -> `Yes`。
 
-#### Step B: 硬體訊號欺騙 (config.txt)
+### Step B: 硬體訊號欺騙 (config.txt)
 
 ```bash
 sudo nano /boot/firmware/config.txt
@@ -41,30 +45,35 @@ sudo nano /boot/firmware/config.txt
 在檔案末尾加入：
 
 ```plaintext
-# 強制偵測 HDMI (騙硬體通電)
+# 強制偵測 HDMI (騙硬體通電，確保 GPU 啟動)
 hdmi_force_hotplug=1
 ```
 
-#### Step C: 內核強制渲染 (cmdline.txt)
+### Step C: 內核強制渲染 (cmdline.txt)
 
 ```bash
 sudo nano /boot/firmware/cmdline.txt
 ```
 
-在原本內容的**同一行末尾**，加入一格空格後貼上：
+在原本內容的 **同一行末尾**，加入一格空格後貼上：
 
 ```plaintext
 video=HDMI-A-1:1920x1080M@60D
 ```
 
-> **注意**：必須保持在同一行，不可換行。
+### Step D: 重啟生效
 
-#### Step D: 重開機
+```bash
+sudo reboot
+```
 
 ---
-## 重置 RustDesk ID
 
-#### 1. 重置 Linux 系統身分 (Machine ID)
+## 3. 重置 RustDesk ID (複製系統後必做)
+
+當你透過映像檔（Image）複製系統到另一台電腦時，必須重置 ID 避免衝突。
+
+### 第一步：重置 Linux 系統身分 (Machine ID)
 
 ```bash
 # 1. 刪除現有的 machine-id
@@ -74,22 +83,23 @@ sudo rm -f /etc/machine-id /var/lib/dbus/machine-id
 sudo dbus-uuidgen --ensure=/etc/machine-id
 sudo cp /etc/machine-id /var/lib/dbus/machine-id
 
-# 3. 檢查一下新的 ID 是否產生了
+# 3. 確認 ID 已變更
 cat /etc/machine-id
 ```
 
-#### 2. 徹底清除 RustDesk 殘留
+### 第二步：徹底清除 RustDesk 殘留設定
 
 ```bash
 sudo systemctl stop rustdesk
+
+# 刪除設定檔目錄
 sudo rm -rf /etc/rustdesk
 sudo rm -rf /var/lib/rustdesk
 sudo rm -rf /root/.config/rustdesk
 rm -rf ~/.config/rustdesk
-```
 
-#### 3. 啟動 RustDesk 服務：
-
-```bash
+# 重新啟動服務以產生新 ID
 sudo systemctl start rustdesk
 ```
+
+---
