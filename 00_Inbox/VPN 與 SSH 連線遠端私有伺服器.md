@@ -59,7 +59,7 @@ ssh hipoint@192.168.68.10
 
 3. **位置：**
 ```
- cd /mnt/nas/hipoint
+cd /mnt/nas/hipoint
 ```
 
 ---
