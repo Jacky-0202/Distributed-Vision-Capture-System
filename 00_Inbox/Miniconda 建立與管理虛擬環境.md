@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Python', 'Miniconda']
 ---
 ## 1. 建立環境
 

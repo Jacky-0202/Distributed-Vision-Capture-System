@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Python', 'Installation']
 ---
 ## 安裝
 

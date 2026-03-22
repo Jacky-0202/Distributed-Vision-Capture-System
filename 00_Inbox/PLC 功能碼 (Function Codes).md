@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['PLC', 'Modbus', 'Automation']
 ---
 ## 摘要
 

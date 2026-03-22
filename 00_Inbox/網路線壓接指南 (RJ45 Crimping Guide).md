@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Hardware', 'Networking', 'Guide']
 ---
 ## 🛠️ 準備工具
 

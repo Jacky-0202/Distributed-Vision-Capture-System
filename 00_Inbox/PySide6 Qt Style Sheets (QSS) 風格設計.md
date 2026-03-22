@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Python', 'Qt', 'UI']
 ---
 ## 摘要
 

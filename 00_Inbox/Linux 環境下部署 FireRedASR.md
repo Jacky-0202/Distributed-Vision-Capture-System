@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Deployment', 'ASR']
 ---
 ## 第一步：系統層級的準備 (OS Level)
 
@@ -84,4 +84,4 @@ ffmpeg -i examples/wav/20260307_123655.m4a \
 python FireRedASR_Speech2Text.py
 ```
 
-[[FireRedASR_Speech2Text]]
+[[FireRedASR_語音轉文字]]

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Ubuntu', 'Installation']
 ---
 ### 第一階段：準備工作
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['PLC', 'Automation', 'Modbus']
 ---
 ### 1. 邏輯位址 (1-based) vs 協議位址 (0-based)
 

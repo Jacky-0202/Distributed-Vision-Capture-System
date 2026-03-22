@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'DataSecurity', 'DiskManagement']
 ---
 ## 🗑 使用 `dd` 永久清除磁碟
 

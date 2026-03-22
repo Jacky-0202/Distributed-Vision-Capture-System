@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Python', 'Linux', 'RaspberryPi']
 ---
 ## 摘要
 

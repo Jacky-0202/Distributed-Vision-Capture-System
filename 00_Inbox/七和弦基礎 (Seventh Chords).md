@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music', 'Theory']
 ---
 ## 1. 什麼是七和弦？
 

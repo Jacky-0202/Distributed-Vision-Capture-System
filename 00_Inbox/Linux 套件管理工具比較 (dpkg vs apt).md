@@ -1,5 +1,6 @@
 ---
-tags:
+tags: ['Linux', 'Package_Management']
+
 ---
 # dpkg vs apt
 

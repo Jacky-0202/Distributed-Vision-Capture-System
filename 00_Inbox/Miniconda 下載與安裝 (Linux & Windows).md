@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Install', 'Miniconda']
 ---
 ## 🐧 Linux 安裝步驟
 

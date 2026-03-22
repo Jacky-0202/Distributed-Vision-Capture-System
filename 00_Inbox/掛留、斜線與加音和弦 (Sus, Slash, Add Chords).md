@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music', 'Theory', 'Chords']
 ---
 ## 1. 掛留和弦 (Suspended Chords, "Sus") —— 「不想回家的張力」
 

@@ -1,5 +1,6 @@
 ---
-tags:
+tags: ['Linux', 'Disk_Management']
+
 ---
 ### 1. 核心流程：看、卸、改
 

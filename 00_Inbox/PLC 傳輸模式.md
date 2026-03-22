@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['PLC', 'Communication', 'Industrial']
 ---
 ## 1. Modbus RTU (Remote Terminal Unit)
 

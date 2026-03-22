@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'PackageManagement', 'Commands']
 ---
 ## 1. 刪除軟體 (Removal)
 

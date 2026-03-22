@@ -14,6 +14,7 @@ Ollama 是系統級服務，直接與 NVIDIA 驅動溝通，**不需**在 Python
 
 1. **安裝指令**：
 ```bash
+sudo apt install curl -y
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 

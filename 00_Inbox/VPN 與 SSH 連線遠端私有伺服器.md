@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Networking', 'SSH']
 ---
 ## 一、 環境準備與套件安裝
 

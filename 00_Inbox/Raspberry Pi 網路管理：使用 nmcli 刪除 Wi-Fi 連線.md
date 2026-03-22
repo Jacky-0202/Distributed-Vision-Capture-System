@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['RaspberryPi', 'NetworkManager', 'Linux']
 ---
 在較新版本的 Raspberry Pi OS (Bookworm+) 中，系統預設使用 **NetworkManager**。使用 `nmcli` 工具可以快速清理不再需要的網路設定檔。
 

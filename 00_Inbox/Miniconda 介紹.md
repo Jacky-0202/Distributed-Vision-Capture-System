@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Python', 'Tool']
 ---
 ## 1. 什麼是 Miniconda？
 
