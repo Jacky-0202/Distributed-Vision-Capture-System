@@ -18,7 +18,7 @@ git config --global user.name "你的名字"
 
 - **設定信箱**：
 ```bash
-git config --global user.name "你的信箱"
+git config --global user.email "你的信箱"
 ```
 
 - **查看配置**：

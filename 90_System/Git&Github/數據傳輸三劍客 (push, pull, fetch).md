@@ -39,7 +39,11 @@ git push
 ### 操作邏輯 (SOP)
 
 1. **上傳前先更新**：在 `push` 之前，養成先 `pull` 的習慣，確保你是在最新的基礎上開發，避免衝突。
-    
 2. **謹慎開發用 fetch**：如果你不確定雲端的變動是否會弄亂你的程式碼，先用 `fetch` 觀察，確認沒問題再手動 `merge`。
-    
 3. **推送到遠端**：確認本地紀錄都 commit 好了，執行 `push` 同步。
+
+> 如果是私人的 repo 每次輸入金鑰很麻煩可以設定成 global
+> `git config --global credential.helper store`
+
+
+
