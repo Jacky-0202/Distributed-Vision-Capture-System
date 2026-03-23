@@ -67,6 +67,8 @@ video=HDMI-A-1:1920x1080M@60D
 sudo reboot
 ```
 
+> 如果要插入欺騙器，記得把畫面驅動改成 X11
+
 ---
 
 ## 3. 重置 RustDesk ID (複製系統後必做)

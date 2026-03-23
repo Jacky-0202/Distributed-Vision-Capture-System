@@ -3,6 +3,7 @@ tags:
 ---
 ## 程式碼
 
+#### 匯入函式庫
 ```python
 import os
 import time
@@ -13,6 +14,13 @@ import argparse
 from funasr import AutoModel
 from pydub import AudioSegment
 from fireredasr.models.fireredasr import FireRedAsr
+```
+
+#### 
+
+
+```python
+
 
 # Workaround for PyTorch 2.4+ security restrictions on loading untrusted models
 _original_load = torch.load

@@ -1,11 +1,7 @@
 ---
-tags: [Obsidian, AI, Classification]
+tags:
 ---
-## 摘要
-
-就是...分就對了
-
-## 程式碼-範例
+## 程式碼
 
 #### 匯入函式庫
 ```python

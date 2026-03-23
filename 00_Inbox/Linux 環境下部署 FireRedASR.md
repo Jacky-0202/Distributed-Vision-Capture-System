@@ -84,4 +84,4 @@ ffmpeg -i examples/wav/20260307_123655.m4a \
 python FireRedASR_Speech2Text.py
 ```
 
-[[FireRedASR_語音轉文字]]
+[[FireRedASR_語音轉文字_程式碼]]

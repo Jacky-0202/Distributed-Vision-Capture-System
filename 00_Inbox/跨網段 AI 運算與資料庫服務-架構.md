@@ -7,7 +7,7 @@ tags: ['AI', 'Networking', 'Database']
 該節點透過 **SQLite 進行門票式驗證**，確保算力不被濫用，並在運算後將實體檔案存於 **本地儲存空間**，僅將結果以 **JSON 格式回傳**。
 
 ---
-## 🏗️ 一、 節點角色與職責定義 (Node Roles)
+## 一、 節點角色與職責定義 (Node Roles)
 
 ### 1. Client (客戶端)
 
@@ -34,22 +34,58 @@ tags: ['AI', 'Networking', 'Database']
 - **存儲層 (Local Storage/NAS)**：將原始圖、標記圖（Annotated）、VOC XML 及 CSV 統計表依目錄層級儲存於 **H200 本地路徑**。
 
 ---
-## 二、 完整的資料處理生命週期 (Data Flow)
+## 二、跨網段 AI 推論服務配置 SOP
 
-當 Client 上傳一張圖片進行 AI 分析時，邏輯路徑如下：
+#### 第一階段：Server A (門戶大開)
 
-1. **發出請求:** Client 呼叫 Server A。
-2. **中繼轉發:** `Server A` -> `Server B` -> `H200 (FastAPI:38005)`。
-3. **驗證門票:** H200 查詢本地 **SQLite**：
+**職責：設定公網入口與代理轉發**
+
+- **Apache 代理檢查**： 確保 `/etc/apache2/sites-available/000-default.conf` 已寫入
+    ```
+    ProxyPass / http://127.0.0.1:38005/
+    ProxyPassReverse / http://127.0.0.1:38005/
+    ```
     
-    - `SELECT 1 FROM Register WHERE serial_no = %s`
-    - **Invalid**: 直接中斷，保護算力。
-    - **Valid**: 進入 AI 流程。
+- **重啟服務**：`sudo systemctl restart apache2`
+- **清理地道口**：若地道異常，先確保 Port 38005 沒有被舊連線卡死。
+- **金鑰庫**：確認 `~/.ssh/authorized_keys` 已持有 Server B 的公鑰。
+
+---
+#### 第二階段：Server B (中繼站)
+
+**職責：建立雙向 SSH 隧道與 VPN 維持**
+
+- **免密碼驗證**：
+    
+    - 測試連 A：`ssh hipoint@59.125.195.194 "echo A_OK"`
+    - 測試連 Virgo：`ssh hipoint@192.168.68.10 "echo Virgo_OK"`
+    
+- **啟動雙向地道 (autossh)**：
+    
+    - **向內抓取 (H200 ➡️ Server B)**： 
+		```bash
+		autossh -M 0 -f -N -o "ServerAliveInterval 30" -L 38005:127.0.0.1:38005 hipoint@192.168.68.10
+		```
+	- **向外推送 (Server B ➡️ Server A)**： 
+		```bash
+		autossh -M 0 -f -N -o "ServerAliveInterval 30" -R 38005:127.0.0.1:38005 hipoint@59.125.195.194
+		```
         
-4. **智能運算:** H200 判斷誘蟲板顏色，調用對應 YOLO 模型。
-5. **本地持久化:**
-    
-    - 建立資料夾：`/[Serial]/[User]/[Crop]/[Field]/...`
-    - 儲存實體檔案（.jpg, .xml, .csv）。
+- **在 Server B 執行這行，看看能不能在本地抓到 H200 的資料：**：
+```bash
+curl http://127.0.0.1:38005/model_meta
+```
 
-6. **內存回傳:** 將 `detections` 數據封裝為 **JSON**，原路回傳給 Client，不寫入資料庫。
+---
+#### 第三階段：H200 / Virgo (運算核心)
+
+**職責：啟動 GPU 推論環境與 API**
+
+- **環境切換**：`cd /mnt/nas/hipoint/PhotoTake && conda activate phototake`
+- **清理舊進程**：`sudo lsof -i :38005` (若有佔用則 kill)。
+- **啟動 API**：
+    ```
+    nohup python -m uvicorn main_test:API --host 0.0.0.0 --port 38005 > api.log 2>&1 &
+    ```
+    
+- **健康檢查**：`tail -f api.log` 確保看到 `Application startup complete`。
