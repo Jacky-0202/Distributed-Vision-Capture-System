@@ -55,7 +55,7 @@ nohup python3 main.py > output.log 2>&1 &
 ps aux | grep [指令關鍵字]
 
 # 例如：
-ps aux | grep python3
+ps aux | grep main
 ```
 
 #### 2. 停止 (結束) 程式
