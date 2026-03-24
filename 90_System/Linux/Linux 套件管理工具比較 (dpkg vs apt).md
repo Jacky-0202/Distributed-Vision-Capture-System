@@ -20,8 +20,8 @@ tags: ['Linux', 'Package_Management']
 
 ## 指令對照表
 
-|**動作**|**dpkg 指令**|**apt 指令**|
-|---|---|---|
-|**安裝本地檔案**|`sudo dpkg -i <file.deb>`|`sudo apt install ./<file.deb>`|
-|**列出已安裝套件**|`dpkg -l`|`apt list --installed`|
-|**查詢套件資訊**|`dpkg -s <pkg_name>`|`apt show <pkg_name>`|
+| **動作**      | **dpkg 指令**               | **apt 指令**                      |
+| ----------- | ------------------------- | ------------------------------- |
+| **安裝本地檔案**  | `sudo dpkg -i <file.deb>` | `sudo apt install ./<file.deb>` |
+| **列出已安裝套件** | `dpkg -l`                 | `apt list --installed`          |
+| **查詢套件資訊**  | `dpkg -s <pkg_name>`      | `apt show <pkg_name>`           |
