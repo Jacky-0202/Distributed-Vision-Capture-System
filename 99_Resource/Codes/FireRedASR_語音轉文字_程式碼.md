@@ -6,8 +6,8 @@ tags:
 ```python
 from fireredasr.models.fireredasr import FireRedAsr
 
-batch_uttid = ["BAC009S0764W0121"]
-batch_wav_path = ["examples/wav/BAC009S0764W0121.wav"]
+batch_uttid = ["BAC009S0764W0121"]                            # label
+batch_wav_path = ["examples/wav/BAC009S0764W0121.wav"]        # source
 
 # FireRedASR-AED
 model = FireRedAsr.from_pretrained("aed", "pretrained_models/FireRedASR-AED-L")

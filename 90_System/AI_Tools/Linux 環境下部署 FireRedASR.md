@@ -24,11 +24,6 @@ cd FireRedASR
 參考：[[Miniconda 建立與管理虛擬環境]]
 官網：[github](https://github.com/FireRedTeam/FireRedASR)
 
-要檢查 cuda version
-```bash
-pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu124
-```
-
 Set up Linux PATH and PYTHONPATH
 ```bash
 export PATH=$PWD/fireredasr/:$PWD/fireredasr/utils/:$PATH
@@ -60,10 +55,26 @@ pip install silero-vad pydub
 ```bash
 ffmpeg -i examples/wav/input.mp3 -ar 16000 -ac 1 -acodec pcm_s16le -f wav examples/wav/output.wav
 ```
-pyt
+
 2.  執行
 ```bash
 python main.py
 ```
 
 [[FireRedASR_語音轉文字_程式碼]]
+
+## 因更新報錯誤
+
+直接修改報錯的檔案： `/home/tec/Documents/Projects/FireRedASR/fireredasr/models/fireredasr.py`
+
+1. 打開該檔案，找到第 110 、114行：
+    ```python
+    110 package = torch.load(model_path, map_location=lambda storage, loc: storage)
+    114 model.load_state_dict(package["model_state_dict"], strict=True)
+    ```
+    
+2. 將其修改為：
+    ```python
+    package = torch.load(model_path, map_location=lambda storage, loc: storage, weights_only=False)
+    model.load_state_dict(package["model_state_dict"], strict=False)
+    ```
