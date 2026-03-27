@@ -6,7 +6,6 @@ tags: ['Python', 'UI_Conversion']
 記錄如何將 Qt Designer 產出的 `.ui` 與 `.qrc` 檔案轉換為 Python 模組，並解決轉換後的檔案路徑與匯入問題。
 
 ---
-
 ### 1. 核心轉換指令
 
 在終端機進入專案目錄後執行：
