@@ -7,7 +7,7 @@ mindmap-plugin: markdown
     - [[音名與唱名 (Pitch Names & Solfege)]]
     - [[全音與半音 (Whole Steps & Half Steps)]]
     - [[十二平均律 (12-Tone Equal Temperament)]]
-    - [[鋼琴鍵盤與吉他指板映射]]
+    - [[鋼琴與吉他指板映射]]
 - 節奏與時間 (Rhythm & Time)
     - [[拍號與BPM (Time Signatures & Tempo)]]
     - [[音符時值與休止符 (Note Values & Rests)]]
