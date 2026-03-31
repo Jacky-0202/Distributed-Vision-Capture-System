@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Scripting', 'Background_Jobs']
 ---
 ## 摘要
 

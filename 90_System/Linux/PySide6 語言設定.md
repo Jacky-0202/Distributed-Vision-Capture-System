@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Python', 'PySide6', 'Localization']
 ---
 ## 摘要
 

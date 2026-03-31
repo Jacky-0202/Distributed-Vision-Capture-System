@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['ComfyUI', 'Installation', 'Linux']
 ---
 ## 🛠️ Step 1. 下載核心程式 (Core)
 

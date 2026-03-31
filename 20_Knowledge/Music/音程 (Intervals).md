@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music_Theory', 'Review']
 ---
 ## 📏 基本單位：半音與全音
 

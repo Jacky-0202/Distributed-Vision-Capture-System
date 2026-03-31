@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Review', 'Python', 'AI']
 ---
 ## 1. 環境配置 (Setup)
 

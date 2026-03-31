@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['PLC', 'Modbus', 'Communication']
 ---
 ## 🛠️ 1. 物理層與通訊參數 (Physical Layer)
 

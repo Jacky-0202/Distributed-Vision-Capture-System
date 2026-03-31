@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Input_Method']
 ---
 ## 下載指令
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['vscode', 'linux', 'installation']
 ---
 ### 安裝 Visual Studio Code-Linux
 

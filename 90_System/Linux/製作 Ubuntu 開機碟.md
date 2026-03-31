@@ -1,5 +1,5 @@
 ---
-tags: ['Linux', 'Ubuntu', 'Installation']
+tags: ['Ubuntu', 'Boot_Disk', 'Installation']
 ---
 ### 第一階段：準備工作
 

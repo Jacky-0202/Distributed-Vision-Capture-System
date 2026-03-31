@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Python', 'Modbus', 'PLC']
 ---
 ## 程式碼
 

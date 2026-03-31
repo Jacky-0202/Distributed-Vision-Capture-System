@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux_Tools', 'Screenshot']
 ---
 ## 🛠️ 如何下載與安裝
 

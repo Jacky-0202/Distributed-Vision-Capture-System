@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['RaspberryPi', 'Hardware', 'Display']
 ---
 ## 摘要
 

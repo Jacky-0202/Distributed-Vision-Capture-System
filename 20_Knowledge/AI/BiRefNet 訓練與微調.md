@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Machine_Learning', 'Data_Science', 'Training']
 ---
 ## 1. 資料集目錄規範
 

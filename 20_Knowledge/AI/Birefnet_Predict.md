@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['AI', 'Python', 'ComputerVision']
 ---
 ## 程式碼
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Linux', 'Networking', 'Samba']
 ---
 ## 摘要
 

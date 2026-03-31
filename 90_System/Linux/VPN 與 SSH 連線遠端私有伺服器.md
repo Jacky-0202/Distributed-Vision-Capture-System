@@ -1,5 +1,5 @@
 ---
-tags: ['Linux', 'Networking', 'SSH']
+tags: ['networking', 'vpn', 'ssh']
 ---
 ## 一、 環境準備與套件安裝
 

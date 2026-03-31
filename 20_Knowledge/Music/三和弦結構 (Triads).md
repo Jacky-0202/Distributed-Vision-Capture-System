@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music', 'Theory', 'Review']
 ---
 ## 🏗️ 三和弦的組成結構 (Structure)
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music', 'Theory', 'Education']
 ---
 ## 什麼是音階
 

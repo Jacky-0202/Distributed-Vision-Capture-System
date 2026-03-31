@@ -1,5 +1,5 @@
 ---
-tags: ['Networking', 'Linux', 'Documentation']
+tags: ['Networking', 'Linux']
 ---
 ## 摘要
 
