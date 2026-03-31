@@ -19,7 +19,7 @@ tags: ['Modbus', 'Linux', 'RaspberryPi']
 > [!info] 參考文件
 > 以下設定對應《DVP-ES2/EX2/EC5/SS2/SA2/SX2/SE&TP 程式操作手冊》的 **通訊特殊繼電器/暫存器 (M/D)** 以及 **API 100 MODRW** 指令章節。
 
-![[Modbus RTU 通訊實作_20260323084041.pdf]]
+![[Modbus RTU 通訊_20260331154321.pdf]]
 
 
 ---

@@ -12,7 +12,7 @@ tags:
 ### A. 擷取文字 (lupdate)
 掃描 `main.py` 與 `ui/main_window.ui`，將 `self.tr()` 標記的文字與 UI 標籤抓取至翻譯源檔。
 ```bash
-pyside6-lupdate main.py ui/main_window.ui -ts ui/zh_TW.ts ui/en_US.ts -target-language zh_TW
+pyside6-lupdate main.py ui/*.ui -ts ui/zh_TW.ts -target-language zh_TW
 ```
 
 ### B. 圖形化翻譯 (Linguist)
@@ -31,5 +31,5 @@ pyside6-linguist ui/zh_TW.ts
 將 XML 格式的 `.ts` 編譯為程式讀取的 `.qm`。
 
 ```bash
-pyside6-lrelease ui/zh_TW.ts ui/en_US.ts
+pyside6-lrelease ui/zh_TW.ts
 ```
