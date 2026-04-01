@@ -17,7 +17,7 @@ tags: ['PLC', 'Communication', 'Industrial']
 
 - **資料格式：** 使用 ASCII 字元。例如，要傳輸十六進制 `0x4A`，RTU 只傳 1 個 Byte，但 ASCII 會拆成 `'4'` 和 `'A'` 兩個字元傳輸。
 - **偵錯機制：** 使用 **LRC (Longitudinal Redundancy Check)** 縱向冗餘檢查碼。
-- **封包特徵：** * 開始符號：冒號 `:`
+- **封包特徵：** 開始符號：冒號 `:`
     
     - 結束符號：換行符號 `CR/LF` (\r\n)
         
