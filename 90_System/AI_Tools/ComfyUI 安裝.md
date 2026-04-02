@@ -26,18 +26,15 @@ cd ComfyUI
 
 建議建立 **Python 虛擬環境 (venv)** 以保持系統乾淨。
 
+參考：[[Miniconda 建立與管理虛擬環境]]
+
 ### 1. 安裝 ComfyUI-Manager (擴充管理工具)
 
 這是一個必裝的擴充功能，用於自動安裝缺失的節點。
 
 ```bash
-# 進入自定義節點資料夾
 cd custom_nodes
-
-# 複製 Manager 倉庫
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git comfyui-manager
-
-# 回到 ComfyUI 根目錄
 cd ..
 ```
 
