@@ -59,8 +59,7 @@ model = BiRefNet(bb_pretrained=False) # 因為稍後會載入完整權重，故�
 python train.py \
   --ckpt ckpts/BiRefNet-general-epoch_244.pth \
   --ckpt_dir ckpts/plant_finetune_v1 \
-  --epochs 100 \
-  --batch_size 4
+  --epochs 100
 ```
 
 >[!IMPORTANT] 參數說明

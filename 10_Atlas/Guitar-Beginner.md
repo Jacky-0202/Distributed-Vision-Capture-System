@@ -2,35 +2,32 @@
 mindmap-plugin: markdown
 aliases:
 ---
-
-
 # Guitar-Beginner
-
 
 ## 第一階段：基礎建設 (The Fundamentals)
 
 - [[吉他構造]]
 - **刷弦基本功：**
-	- **刷弦記號**
+	- [[刷弦記號]]
     - **撥弦法 (Picking)**
     - **刷弦法 (Strumming)**
-- **左手基礎**
+- [[左手基礎]]
 
 ## 第二階段：樂理邏輯 (The Logic Layer)
 
 - [[音程 (Intervals)]]
 - [[音階 (Scales)]]
 - [[鋼琴與吉他指板映射]]
-- **移調夾 (Capo) 原理**
+- [[移調夾 (Capo) 原理]]
 
 ## 第三階段：和聲與和弦 (Harmony & Chords)
 
 - [[三和弦結構 (Triads)]]
 - **順階三和弦 (Diatonic Triads)：**
-    - **C 大調順階三和弦**
-    - **G 大調順階三和弦**
+    - [[C 大調順階三和弦]]
+    - [[G 大調順階三和弦]]
 - **封閉和弦 (Barre Chords)**
-- **和弦轉位 (Inversions)**
+- [[和弦轉位 (Inversions)]]
 
 ## 第四階段：表現力與技巧 (Articulations)
 
