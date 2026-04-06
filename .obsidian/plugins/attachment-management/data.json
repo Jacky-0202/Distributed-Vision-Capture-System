@@ -3,7 +3,7 @@
   "attachPath": {
     "attachmentRoot": "99_Resource",
     "saveAttE": "inFolderBelow",
-    "attachmentPath": ".",
+    "attachmentPath": "",
     "attachFormat": "${notename}_${date}",
     "type": "GLOBAL",
     "extensionOverride": [
