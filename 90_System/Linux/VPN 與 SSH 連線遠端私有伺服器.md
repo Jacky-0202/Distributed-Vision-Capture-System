@@ -20,7 +20,6 @@ sudo systemctl restart NetworkManager
 ---
 ## 二、 設定 VPN 連線資訊
 
-
 - 進入 **Settings (設定)** > **Network (網路)** > **VPN** > 按下 **+** 新增。
 - 選擇 **Layer 2 Tunneling Protocol (L2TP)**。
     
@@ -39,7 +38,6 @@ sudo systemctl restart NetworkManager
 - 儲存並開啟 VPN 開關。如果連線成功，右上角會有 VPN 圖示。
 
 ---
-
 ## 三、VPN 連線驗證
 
 VPN 連線成功後，您就可以存取內網 IP `192.168.68.10` 。
@@ -63,7 +61,6 @@ cd /mnt/nas/hipoint
 ```
 
 ---
-
 ## 四、H200 (Virgo) 主機資訊
 
 | 項目 | 資訊 |
@@ -73,7 +70,6 @@ cd /mnt/nas/hipoint
 | 連線方式 | SSH |
 
 ---
-
 ## 五、Docker 與 GPU 驗證
 
 ```bash
@@ -82,7 +78,6 @@ docker run -it --gpus all \
 ```
 
 ---
-
 ## 八、儲存空間使用規範
 
 ### /scratch
@@ -96,7 +91,6 @@ docker run -it --gpus all \
 - 權限限制目錄
 
 ---
-
 ## 九、公用 nas
 
 ```
