@@ -12,7 +12,10 @@ aliases:
     - **撥弦法 (Picking)**
     - **刷弦法 (Strumming)**
 - [[左手基礎]]
-
+- **樂譜導航與路徑 (Musical Roadmap)**：
+	- 重複記號 (Repeat Signs)
+	- 結尾記號 (1st & 2nd Endings)
+	- 反始記號 (D.C. / D.S. / Coda)
 ## 第二階段：樂理邏輯 (The Logic Layer)
 
 - [[音程 (Intervals)]]
