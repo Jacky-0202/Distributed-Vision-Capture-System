@@ -51,9 +51,9 @@ pip install silero-vad pydub
 ---
 ## 第五步：轉檔與執行
 
-1. m4a to wav
+1. m4a/mp3 to wav
 ```bash
-ffmpeg -i examples/wav/church_test.mp3 -ar 16000 -ac 1 -acodec pcm_s16le -f wav examples/wav/output.wav
+ffmpeg -i examples/wav/input.mp3 -ar 16000 -ac 1 -acodec pcm_s16le -f wav examples/wav/output.wav
 ```
 
 2.  執行
