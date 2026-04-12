@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['PLC', 'Automation', 'System_Architecture']
 ---
 ## 🏗️ 系統層級圖 (Hierarchy)
 

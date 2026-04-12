@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music_Theory']
 ---
 ---
 ## 和弦轉位 (Inversions)

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music_Theory', 'G_Major']
 ---
 # 🎼 G 大調順階三和弦 (G Major Diatonic Triads)
 

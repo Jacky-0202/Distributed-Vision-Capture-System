@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Git', 'VersionControl']
 ---
 如果您希望以本地端的狀態為準，強制覆蓋 GitHub 遠端倉庫（Remote Repository）的所有內容，
 最直接的方法是使用 **`push -f` (Force Push)**。

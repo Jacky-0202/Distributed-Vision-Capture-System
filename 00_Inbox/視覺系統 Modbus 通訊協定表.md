@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Automation', 'PLC', 'Modbus']
 ---
 ### 1. 通訊參數 (Physical Layer)
 

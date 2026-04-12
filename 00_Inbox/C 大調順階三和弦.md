@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music_Theory']
 ---
 ## 三度疊置
 

@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Git', 'VersionControl']
 ---
 ## 📑 核心哲學 (Philosophy)
 

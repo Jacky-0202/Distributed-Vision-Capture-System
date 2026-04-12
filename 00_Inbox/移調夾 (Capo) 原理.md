@@ -1,5 +1,5 @@
 ---
-tags:
+tags: ['Music_Theory', 'Guitar']
 ---
 ## 💻 邏輯原理：全域 Offset 運算
 
