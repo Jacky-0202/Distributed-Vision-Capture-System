@@ -13,7 +13,7 @@ tags: [Pi, Systemd, StartupScript]
 
 1. **開啟編輯器**： 
 ```bash
-sudo nano /etc/systemd/system/pds.service
+sudo nano /etc/systemd/system/phototake.service
 ```
 
 2. **貼入以下通用內容**（請根據實際路徑修改 `{{...}}` 處）：

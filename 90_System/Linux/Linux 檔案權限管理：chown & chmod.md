@@ -18,7 +18,7 @@ sudo chown [使用者]:[群組] [檔案路徑]
 ```bash
 sudo chown tec pi_backup.img
 ```
-    
+
 - **更改擁有者與群組**：同時將擁有者與群組都改為 `tec`。
 
 ```bash

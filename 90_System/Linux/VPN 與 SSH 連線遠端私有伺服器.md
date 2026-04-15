@@ -33,7 +33,7 @@ sudo systemctl restart NetworkManager
 - **IPsec 設定** (點擊 "IPsec Settings..." 按鈕)：
     
     - 勾選 "Enable IPsec tunnel to L2TP host"。
-    - **Pre-shared key (預先共用金鑰)**: `bigdata91201` (對應文件中的 IPsec public key) 。[沒用到]
+    - **Pre-shared key (預先共用金鑰)**: `bigdata91201` (對應文件中的 IPsec public key) 。
         
 - 儲存並開啟 VPN 開關。如果連線成功，右上角會有 VPN 圖示。
 
