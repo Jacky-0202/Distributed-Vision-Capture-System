@@ -65,7 +65,17 @@ L2TP 協議會增加封包標頭大小，若超過網路限制會導致連線不
 
 當連線斷開時，可查看系統日誌找出具體原因：
 
-|**指令**|**目的**|
-|---|---|
-|`journalctl -u NetworkManager -f`|即時監看 VPN 連線狀態與錯誤訊息|
-|`ssh -v hipoint@192.168.68.10`|以偵錯模式啟動 SSH，查看中斷原因|
+| **指令**                            | **目的**             |
+| --------------------------------- | ------------------ |
+| `journalctl -u NetworkManager -f` | 即時監看 VPN 連線狀態與錯誤訊息 |
+| `ssh -v hipoint@192.168.68.10`    | 以偵錯模式啟動 SSH，查看中斷原因 |
+
+---
+## 補充
+
+### 設定步驟
+
+1. **Settings** > **Network** > **VPN (H200 VPN)** > 點擊齒輪圖示。
+2. 切換至 **IPv4** 分頁。
+3. **勾選**：`Use this connection only for resources on its network` (僅將此連線用於其網路上的資源)。
+4. 儲存並重新啟動 VPN。

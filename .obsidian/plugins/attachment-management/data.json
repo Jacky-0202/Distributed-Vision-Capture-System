@@ -8,7 +8,7 @@
     "type": "GLOBAL",
     "extensionOverride": [
       {
-        "extension": "png, jpg, jpeg",
+        "extension": "png|gif",
         "attachmentRoot": "99_Resource",
         "saveAttE": "inFolderBelow",
         "attachmentPath": "Images",

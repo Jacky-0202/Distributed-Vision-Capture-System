@@ -24,7 +24,7 @@ tags: [Obsidian, Attachment, Configuration]
 
 在插件設定的 **"Extension Metadata Setting"** 區塊：
 
-- 在 `Extension` 欄位輸入：`png, jpg, jpeg`
+- 在 `Extension` 欄位輸入：`png|jpg|jpeg`
 - 點擊右側的 **「+ Add」** 按鈕。
 - **關鍵動作**：點擊該行右側出現的 **「編輯（鉛筆圖示）」** 進入進階設定。
 

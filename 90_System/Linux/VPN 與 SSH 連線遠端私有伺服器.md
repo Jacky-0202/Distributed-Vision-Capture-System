@@ -29,7 +29,14 @@ sudo systemctl restart NetworkManager
     - **Gateway (閘道器)**: `140.127.155.41`
     - **User name (使用者名稱)**: `hipoint`
     - **Password (密碼)**: `8885@Hpt#%^` (注意：這組 VPN 密碼是統一管理的，使用者**不可**更改 )
-        
+
+- **將此連線用於其網路上的資源**
+
+	1. **Settings** > **Network** > **VPN (H200 VPN)** > 點擊齒輪圖示。
+	2. 切換至 **IPv4** 分頁。
+	3. **勾選**：`Use this connection only for resources on its network`。
+	4. 儲存並重新啟動 VPN。
+
 - **IPsec 設定** (點擊 "IPsec Settings..." 按鈕)：
     
     - 勾選 "Enable IPsec tunnel to L2TP host"。
