@@ -25,3 +25,9 @@ git pull origin main -X ours --no-edit
 1. `git add .` & `commit`: Git 要求在合併前必須先提交本地修改。
 2. `-X ours`: 這是關鍵參數。如果雲端與本地衝突，Git 會自動選擇「我們的（本機）」版本，略過雲端的修改。
 3. `--no-edit`: 自動跳過合併訊息的 Vim 視窗。
+
+#### 重新上傳
+
+```bash
+git push
+```
