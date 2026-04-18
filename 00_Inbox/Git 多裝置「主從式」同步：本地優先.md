@@ -15,19 +15,23 @@ tags: ['Git', 'VersionControl']
 ### 核心指令
 
 ```
+# 1. 提交本機修改 (Git 要求合併前必須先 Commit)
 git add .
 git commit -m "Save local before pull"
+
+# 2. 拉取並自動以本機為準解決衝突
 git pull origin main -X ours --no-edit
+
+# 3. 將合併後的「本機真理」同步回雲端
+git push origin main
 ```
 
-### 動作拆解
+#### 動作拆解
 
-1. `git add .` & `commit`: Git 要求在合併前必須先提交本地修改。
-2. `-X ours`: 這是關鍵參數。如果雲端與本地衝突，Git 會自動選擇「我們的（本機）」版本，略過雲端的修改。
-3. `--no-edit`: 自動跳過合併訊息的 Vim 視窗。
-
-#### 重新上傳
-
-```bash
-git push
-```
+- **`git add .` & `commit`**：確保本機目前的進度已被紀錄，萬一合併結果不滿意還可以還原。
+    
+- **`-X ours`**：**關鍵參數**。告訴 Git：「如果雲端和本機衝突，直接選本機的內容」，不需要手動刪除衝突標記。
+    
+- **`--no-edit`**：防止 Git 彈出 Vim 編輯器要求輸入合併訊息，讓流程全自動化。
+    
+- **`git push`**：這一步非常重要，目的是將解決衝突後的「最終版本」推回 GitHub，讓雲端也臣服於本機的內容。
