@@ -8,10 +8,10 @@ aliases:
 
 - [[吉他構造]]
 - **刷弦基本功：**
-	- [[刷弦記號]]
+	- [[右手刷弦]]
     - **撥弦法 (Picking)**
     - **刷弦法 (Strumming)**
-- [[左手基礎]]
+- [[左手指法]]
 - **樂譜導航與路徑 (Musical Roadmap)**：
 	- 重複記號 (Repeat Signs)
 	- 結尾記號 (1st & 2nd Endings)
