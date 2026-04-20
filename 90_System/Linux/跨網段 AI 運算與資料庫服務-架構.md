@@ -58,22 +58,30 @@ tags:
 
 **職責：建立雙向 SSH 隧道與 VPN 維持**
 
-- **免密碼驗證**：
-    
-    - 測試連 A：`ssh hipoint@59.125.195.194 "echo A_OK"`
-    - 測試連 Virgo：`ssh hipoint@192.168.68.10 "echo Virgo_OK"`
-    
 - **啟動雙向地道 (autossh)**：
     
     - **向內抓取 (H200 ➡️ Server B)**： 
 		```bash
 		autossh -M 0 -f -N -o "ServerAliveInterval 30" -L 38005:127.0.0.1:38005 hipoint@192.168.68.10
 		```
+	
 	- **向外推送 (Server B ➡️ Server A)**： 
+		**請再開一個新的 Terminal 視窗連到 Server B**，執行：
 		```bash
-		autossh -M 0 -f -N -o "ServerAliveInterval 30" -R 38005:127.0.0.1:38005 hipoint@59.125.195.194
+		# 把 Server B 的鑰匙交給 Server A，以後就不用打密碼
+		ssh-copy-id hipoint@192.168.35.209
+		autossh -M 0 -f -N -o "ServerAliveInterval 30" -R 38005:127.0.0.1:38005 hipoint@192.168.35.209
 		```
-        
+
+- **免密碼驗證**：
+    
+    - 測試連 Virgo：
+
+```bash
+ssh hipoint@192.168.68.10 "echo Virgo_OK"
+```
+
+
 - **在 Server B 執行這行，看看能不能在本地抓到 H200 的資料：**：
 ```bash
 curl http://127.0.0.1:38005/model_meta

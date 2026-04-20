@@ -38,7 +38,7 @@ git push -u origin main
 
 - 之後的流程
 ```bash
-git add .
+git add -A
 git commit -m "message"
 git push
 ```
