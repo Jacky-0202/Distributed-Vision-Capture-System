@@ -2,20 +2,23 @@
 mindmap-plugin: markdown
 aliases:
 ---
+
+
 # Guitar-Beginner
+
 
 ## 第一階段：基礎建設 (The Fundamentals)
 
 - [[吉他構造]]
 - **刷弦基本功：**
-	- [[右手刷弦]]
+    - [[右手刷弦]]
     - **撥弦法 (Picking)**
     - **刷弦法 (Strumming)**
 - [[左手指法]]
 - **樂譜導航與路徑 (Musical Roadmap)**：
-	- 重複記號 (Repeat Signs)
-	- 結尾記號 (1st & 2nd Endings)
-	- 反始記號 (D.C. / D.S. / Coda)
+    - [[重複記號 (Repeat Signs)]]
+    - 反始記號 (D.C. / D.S. / Coda)
+
 ## 第二階段：樂理邏輯 (The Logic Layer)
 
 - [[音程 (Intervals)]]

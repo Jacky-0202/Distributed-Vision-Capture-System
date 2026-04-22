@@ -32,7 +32,6 @@ tags:
 
 - **角色**：系統大腦。
 - **介面層 (FastAPI)**：接收來自 Server B 的封包，解析 `serial_no` 與 `file` 等參數。
-- **驗證層 (SQLite)**：**關鍵門禁**。比對 `Register` 資料表，若 `serial_no` 不合法則直接回傳錯誤，不啟動模型，藉此**保護 GPU 算力資源**。
 - **運算層 (PyTorch/AI)**：模型（如 YOLOv9）執行推論，並產出預測座標與類別。
 - **存儲層 (Local Storage/NAS)**：將原始圖、標記圖（Annotated）、VOC XML 及 CSV 統計表依目錄層級儲存於 **H200 本地路徑**。
 
