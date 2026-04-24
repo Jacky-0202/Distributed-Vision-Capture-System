@@ -44,14 +44,22 @@ def get_cpu_temp():
 async def start_camera():
     """啟動相機進入信號模式 (常駐預覽/暖機)"""
     if state.process is None:
-        print(f"🚀 [Node {NODE_ID}] Starting Camera Engine (rpicam-still)...")
+        print(f"🚀 [Node {NODE_ID}] Starting Camera Engine...")
+        
+        # 💡 使用絕對路徑，並移除容易出錯的 --datetime 參數
         cmd = [
-            "rpicam-still", "-t", "0", "--signal", "--nopreview",
+            "/usr/bin/rpicam-still", "-t", "0", "--signal", "--nopreview",
             "-o", os.path.join(TEMP_DIR, "capture_.jpg"),
-            "--datetime", "--quality", "95", "--width", "4608", "--height", "2592"
+            "--quality", "95", "--width", "4608", "--height", "2592"
         ]
-        # preexec_fn=os.setsid 確保我們能控制整個進程組的信號
-        state.process = await asyncio.create_subprocess_exec(*cmd, preexec_fn=os.setsid)
+        
+        state.process = await asyncio.create_subprocess_exec(
+            *cmd, 
+            preexec_fn=os.setsid,
+            # 💡 把 rpicam-still 的內部報錯也導向給 Python，這樣我們才能在 journalctl 看到真正的錯誤
+            stdout=subprocess.PIPE, 
+            stderr=subprocess.PIPE
+        )
         state.last_access = time.time()
 
 async def stop_camera():
