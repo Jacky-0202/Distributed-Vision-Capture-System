@@ -4,7 +4,7 @@ import signal
 import time
 import subprocess
 from datetime import datetime
-from fastapi import FastAPI, HTTPException, Body
+from fastapi import FastAPI, HTTPException, Body, BackgroundTasks # 💡 匯入了 BackgroundTasks
 from fastapi.responses import FileResponse
 
 app = FastAPI(title="DVCS Slave Node Service")
@@ -117,7 +117,7 @@ async def remote_restart(mode: str = "service"):
         return {"message": "Service restarting..."}
 
 @app.post("/take_photo")
-async def take_photo(payload: dict = Body(...)):
+async def take_photo(background_tasks: BackgroundTasks, payload: dict = Body(...)): # 💡 加上了 BackgroundTasks
     """
     執行拍照任務並依照規範重命名
     命名格式: CAM{ID}_{LIGHT}_{YYYYMMDD_HHMMSS}.jpg
@@ -125,14 +125,23 @@ async def take_photo(payload: dict = Body(...)):
     async with state.lock:
         state.last_access = time.time()
         
-        # 若相機已休眠，自動喚醒
-        if state.process is None:
+        # 💡 新增機制：檢查相機進程是否還活著 (returncode 為 None 代表還在跑)
+        is_alive = state.process is not None and state.process.returncode is None
+        
+        if not is_alive:
+            print(f"⚠️ [Node {NODE_ID}] Camera engine is dead or not started. Restarting...")
+            state.process = None # 清除舊物件
             await start_camera()
-            await asyncio.sleep(1.2) # 等待硬體暖機
+            await asyncio.sleep(1.5) # 給一點時間啟動
 
-        # 發送拍照信號
-        print(f"📸 [Node {NODE_ID}] Triggering capture (rpicam)...")
-        state.process.send_signal(signal.SIGUSR1)
+        try:
+            # 發送拍照信號
+            print(f"📸 [Node {NODE_ID}] Triggering capture (rpicam)...")
+            state.process.send_signal(signal.SIGUSR1)
+        except ProcessLookupError:
+            # 💡 萬一在這一瞬間斷掉，直接報錯並要求重試，避免程式崩潰
+            state.process = None
+            raise HTTPException(status_code=500, detail="Camera engine lost. Please try again.")
         
         # 等待寫入 RAM Disk
         await asyncio.sleep(0.5) 
@@ -150,9 +159,12 @@ async def take_photo(payload: dict = Body(...)):
         final_name = f"CAM{NODE_ID}_{light}_{timestamp}.jpg"
         final_path = os.path.join(TEMP_DIR, final_name)
         
-        # 重新命名並回傳檔案流
+        # 重新命名
         os.rename(latest_file, final_path)
         print(f"✅ [Node {NODE_ID}] Photo saved: {final_name}")
+
+        # 💡 新增機制：傳輸完成後，在背景自動刪除這個暫存檔，保護 RAM Disk 不會塞滿
+        background_tasks.add_task(os.remove, final_path)
 
         return FileResponse(final_path, media_type="image/jpeg", filename=final_name)
 
