@@ -23,7 +23,7 @@ IDLE_LIMIT = 600
 
 class CameraState:
     def __init__(self):
-        self.process = None       # 儲存 libcamera 進程物件
+        self.process = None       # 儲存 rpicam 進程物件
         self.last_access = 0      # 最後一次呼叫 API 的時間
         self.lock = asyncio.Lock() # 確保拍照過程不被重疊觸發
 
@@ -43,10 +43,10 @@ def get_cpu_temp():
 async def start_camera():
     """啟動相機進入信號模式 (常駐預覽/暖機)"""
     if state.process is None:
-        print(f"🚀 [Node {NODE_ID}] Starting Camera Engine (Persistent Mode)...")
-        # -t 0: 持續執行; --signal: 等待 SIGUSR1 才拍照; --nopreview: 禁用桌面預覽(省資源)
+        print(f"🚀 [Node {NODE_ID}] Starting Camera Engine (rpicam-still)...")
+        # 💡 已更換為 rpicam-still
         cmd = [
-            "libcamera-still", "-t", "0", "--signal", "--nopreview",
+            "rpicam-still", "-t", "0", "--signal", "--nopreview",
             "-o", os.path.join(TEMP_DIR, "capture_.jpg"),
             "--datetime", "--quality", "95", "--width", "4608", "--height", "2592"
         ]
@@ -59,7 +59,6 @@ async def stop_camera():
     if state.process:
         print(f"💤 [Node {NODE_ID}] Idle limit reached. Powering off camera sensor...")
         try:
-            # 使用 os.killpg 確保乾淨關閉進程組，不留殘餘
             os.killpg(os.getpgid(state.process.pid), signal.SIGTERM)
             await state.process.wait()
         except Exception as e:
@@ -114,7 +113,7 @@ async def remote_restart(mode: str = "service"):
         os.system("sleep 2 && sudo reboot &")
         return {"message": "Hardware rebooting..."}
     else:
-        os.system("sleep 2 && sudo systemctl restart dvcs_slave &")
+        os.system("sleep 2 && sudo systemctl restart dvcs &")
         return {"message": "Service restarting..."}
 
 @app.post("/take_photo")
@@ -132,10 +131,10 @@ async def take_photo(payload: dict = Body(...)):
             await asyncio.sleep(1.2) # 等待硬體暖機
 
         # 發送拍照信號
-        print(f"📸 [Node {NODE_ID}] Triggering capture...")
+        print(f"📸 [Node {NODE_ID}] Triggering capture (rpicam)...")
         state.process.send_signal(signal.SIGUSR1)
         
-        # 等待寫入 RAM Disk (調整此數值以確保檔案寫入完整)
+        # 等待寫入 RAM Disk
         await asyncio.sleep(0.5) 
         
         # 尋找最新產出的照片
